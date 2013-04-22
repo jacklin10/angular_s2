@@ -1,0 +1,9 @@
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    - case name
+    - when :notice
+        div.flash-info
+          = msg
+    - when :error
+        div.flash-err
+          = msg

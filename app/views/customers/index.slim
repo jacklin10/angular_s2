@@ -1,0 +1,21 @@
+div(ng-app="customer_app")
+  h1 Clients
+
+  span(ng-controller='CustomerCtrl' )
+    = render partial: 'shared/search'
+    p
+    | debug = {{version4model}}
+    p
+    | ugh = {{version4}}
+    // <p>Big: {{ballz}}</p>
+    // <p>Stuff: {{customer.name}}</p>
+    // <p>Stuff: irst: {{customer.first_name}}</p>
+    // <p>counter v4 xx: {{counter}}</p>
+    // <p>counter v4 xx: {{version4model.counter}}</p>
+    // <p>counter v4 zz: {{version4.counter}}</p>
+
+
+    div(ng-view)
+      p Here's the view
+    br
+    p after view

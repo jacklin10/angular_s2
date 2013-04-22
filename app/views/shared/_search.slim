@@ -1,0 +1,16 @@
+br
+div.filter-box
+  |  Find Client: &nbsp;
+
+  // This works but the change doesn't fire.  Guess you need to tie to the select2 ui
+  // div#e3(ng-change="change()" ng-model="customer")
+
+  //<input type="hidden" ui-select2="version4" ng-model="version4model" ng-click="update()" style="width:200px" />
+  <input ui-select2="select2GroupConfig" ng-model="group" />
+
+  <input type="text" name="userName" ng-model="customer.name" required>
+
+//  div here ya go: {{customer.name}}
+  // = form_tag '/customers' do |f|
+  //   = text_field_tag :id, '', id: 'e3'
+  //   = submit_tag

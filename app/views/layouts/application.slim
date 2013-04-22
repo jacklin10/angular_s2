@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    = render partial: 'layouts/head'
+  body
+    div.container.bg-white.stroke
+      div.header-small
+        div.container
+          div.info-area
+            span.info-item = sign_in_or_sign_out
+      div.menu
+        = render partial: 'layouts/app_menu'
+      div.container
+        = render partial: 'layouts/messages'
+      div.container.padded
+        = yield
+      div.footer-plain

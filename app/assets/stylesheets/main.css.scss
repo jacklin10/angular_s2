@@ -1,0 +1,137 @@
+@import "bourbon";
+@import "neat";
+
+/* ----- Tags ----- */
+body {
+  font-size: 16px;
+  background-repeat: repeat-x;
+  margin: 0px;
+  padding: 0px;
+  background-color: #64a2ed;
+}
+
+h1,h2,h3,h4,h5, .anuik {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ----- Text Styles ----- */
+.subtle-text {
+  font-size: .9em;
+  color: #FFF;
+}
+
+.stroke {
+  border: 1px solid black;
+}
+
+.bg-white {
+  background-color: #FFF;
+}
+
+.large-txt {
+  font-size: 3em;
+}
+
+.medium-txt {
+  font-size: 1.3em;
+}
+
+.call-out {
+  color: #b72200;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button {
+  @include button(shiny, $red-accent);
+}
+
+/* ----- FORMS ----- */
+form {
+  label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  input[type='email'] {
+    height: 30px;
+    font-size: 16px;
+    padding: 5px;
+    color: #000;
+  }
+  input[type='submit'] {
+    @include button(shiny, $red-accent);
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+
+/* ----- FLASH ----- */
+.flash-err, .flash-info {
+  padding: 10px;
+  margin: 10px;
+  @include shift(1);
+  @include span-columns(10);
+  @include border-radius(4px);
+  text-align: center;
+}
+
+.flash-err {
+  border: 1px solid #9b3030;
+  @include linear-gradient(#ffd1d1,#f68b8b);
+  color: #a43030;
+}
+
+.flash-info {
+  border: 1px solid #066c8e;
+  @include linear-gradient(#d1f4ff,#8bdef6);
+  color: #045772;
+}
+
+/* ----- FONT LOADING ----- */
+.wf-loading h1, .wf-loading p, .wf-loading h3 {
+  visibility:hidden;
+}
+
+/* ----- HYPERLINKS ----- */
+.header-small a:link, .header-small a:visited {
+  text-decoration: none;
+  color: #e0e0e0;
+}
+
+.header-small a:hover, .header-small:active {
+  text-decoration: underline;
+  color: #FFF;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #c6781c;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+  color: #b36100;
+}
+
+/* ----- CONTENT BOX ----- */
+div.filter-box {
+  border: 1px solid #64a2ed;
+  @include linear-gradient(#e8eeff,#dbe5ff);
+  @include border-radius(4px);
+
+  color: #365478;
+  padding: 15px;
+}
+
+div.content-box {
+  border: 1px solid #cbcbcb;
+  @include linear-gradient(#efefef,#e5e5e5);
+  @include box-shadow(0 1px 3px 0px hsla(0, 0%, 0%, 0.25));
+
+  color: #365478;
+  padding: 10px;
+}
+
+

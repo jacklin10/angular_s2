@@ -1,0 +1,23 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *defaults
+  database: angulars2_development
+  username:
+  password:
+
+test: &test
+  <<: *defaults
+  database: angulars2_test
+  username:
+  password:
+
+production:
+  <<: *defaults
+  database: angulars2_production
+  username:
+  password:

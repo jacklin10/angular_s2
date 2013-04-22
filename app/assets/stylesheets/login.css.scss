@@ -1,0 +1,35 @@
+@import "bourbon";
+@import "neat";
+
+div.login-box {
+  background-color: #F4F6F7;
+  padding: 10px;
+  @include span-columns(6);
+  @include shift(3);
+  @include border-radius(10px);
+  @include box-shadow(0px 5px 10px 1px hsla(0, 0%, 0%, 0.1) );
+
+  input[type='email'], input[type='password'] {
+    height: 30px;
+    font-size: 1.1em;
+    width: 100%;
+    padding: 0px;
+  }
+
+  @include media($tablet) {
+    @include span-columns(6);
+    @include shift(1);
+    font-size: .8em;
+    background-color: cyan;
+  }
+
+  @include media($mobile) {
+    @include span-columns(1);
+    @include shift(0);
+    display: block;
+    float: left;
+    width: 100%;
+    .sign-in-btn { width: 100%; }
+  }
+
+}

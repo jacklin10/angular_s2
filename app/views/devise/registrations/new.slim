@@ -1,0 +1,24 @@
+h2 Sign up
+- resource.with_single_company
+= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  div = f.label :email
+  = f.email_field :email
+  br
+  br
+  div = f.label :password
+  = f.password_field :password
+  br
+  br
+  div = f.label :password_confirmation
+  = f.password_field :password_confirmation
+  br
+  br
+    = f.fields_for :companies do |company_form|
+      div = company_form.label :name, "Company Name"
+      = company_form.text_field :name
+  br
+  br
+  div = f.submit "Sign up"
+  br
+  = render "devise/shared/links"
